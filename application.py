@@ -70,6 +70,10 @@ def create_app():
             alerts.append(s)
 
         return jsonify(alerts)
+    
+    @app.route("/contact")
+    def contact():
+        return render_template("contact.html")
 
     @app.route("/govtalerts", methods=["GET", "POST"])
 
@@ -117,6 +121,8 @@ def create_app():
             s = {"datetime":w1[1],"location":w1[3],"calamity":w1[2],"description":w1[4]}
             alerts.append(s)
         return jsonify(alerts)
+    
+
     
     @app.route("/aialerts", methods=["GET","POST"])
 

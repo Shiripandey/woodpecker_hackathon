@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('h9.jpeg'); /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Keep the background fixed during scrolling */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
+            background-color: #f7f9fc; /* Fallback background color */
+        }
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent navbar background */
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important; /* Navbar text color */
+            padding: 15px 20px;
+        }
+        .navbar-brand img {
+            max-height: 50px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .alert-info {
+            border: none; /* Remove border for minimalistic look */
+            border-radius: 8px; /* Rounded edges */
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .alert-info:hover {
+            transform: scale(1.05); /* Slightly enlarge the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for hover effect */
+        }
+        .alert-info h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .color-box-1 { background-color: #d3f9d8; }
+        .color-box-2 { background-color: #fbd5c1; }
+        .color-box-3 { background-color: #f7d6e0; }
+        .color-box-4 { background-color: #cce5ff; }
+        .color-box-5 { background-color: #d5a6f2; }
+        .color-box-6 { background-color: #b6e7b9; }
+        .color-box-7 { background-color: #ffecb3; }
+        .color-box-8 { background-color: #f8cfcf; }
+        .color-box-9 { background-color: #d3e4f3; }
+    </style>
+</head>
+<body>
+    <!--MAINMENU AREA-->
+    <div class="mainmenu-area" id="mainmenu-area">
+        <div class="mainmenu-area-bg"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                    <img src="../static/img/logo.png" alt="logo" style="margin-top: 10px;">
+                </a>
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul id="nav" class="navbar-nav">
+                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/commonalerts" class="nav-link">Issue Alerts</a></li>
+                        <li class="nav-item"><a href="/viewcommonalerts" class="nav-link">View Alerts</a></li>
+                        <li class="nav-item"><a href="/govtalerts" class="nav-link">Issue Govt Alert</a></li>
+                        <li class="nav-item"><a href="/viewgovtalerts" class="nav-link">View Govt Alert</a></li>
+                        <li class="nav-item"><a href="/contact" class="nav-link">Contact Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--END MAINMENU AREA END-->
+
+    <div class="container">
+        <div class="grid-container">
+            <div class="alert alert-info color-box-1">
+                <h2>Emergency Number:</h2>
+                <p>Call <a href="tel:485757575">485757575</a> for immediate assistance.</p>
+            </div>
+            <div class="alert alert-info color-box-2">
+                <h2>Share Your Location:</h2>
+                <button onclick="sendCurrentLocation()" class="btn btn-primary">Send Current Location</button>
+            </div>
+            <div class="alert alert-info color-box-3">
+                <h2>Nearby Hospitals:</h2>
+                <a href="/nearby-hospitals" class="btn btn-info">View Nearby Hospitals</a>
+            </div>
+            <div class="alert alert-info color-box-4">
+                <h2>Request Food Supplies:</h2>
+                <a href="/food-shortage" class="btn btn-warning">Request Food Supplies</a>
+            </div>
+            <div class="alert alert-info color-box-5">
+                <h2>Request Shelter:</h2>
+                <a href="/request-shelter" class="btn btn-success">Request Shelter</a>
+            </div>
+            <div class="alert alert-info color-box-6">
+                <h2>Request Medical Aid:</h2>
+                <a href="/request-medical-aid" class="btn btn-danger">Request Medical Aid</a>
+            </div>
+            <div class="alert alert-info color-box-7">
+                <h2>Request Rescue:</h2>
+                <a href="/request-rescue" class="btn btn-secondary">Request Rescue</a>
+            </div>
+            <div class="alert alert-info color-box-8">
+                <h2>Report Missing Person:</h2>
+                <a href="/report-missing-person" class="btn btn-dark">Report Missing Person</a>
+            </div>
+            <div class="alert alert-info color-box-9">
+                <h2>Emergency Kit:</h2>
+                <a href="/emergency-kit" class="btn btn-light">View Emergency Kit</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function sendCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // Send the location to the server
+                    fetch('/send-location', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            latitude: position.coords.latitude,
+                            longitude: position.coords.longitude
+                        })
+                    }).then(response => {
+                        if (response.ok) {
+                            alert('Location sent successfully!');
+                        } else {
+                            alert('Failed to send location.');
+                        }
+                    });
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        }
+    </script>
+</body>
+</html>
