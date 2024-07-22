@@ -16,7 +16,12 @@ Sneak Peek of the website
 
 ![23](https://github.com/user-attachments/assets/fbea0d43-92bf-4891-93ee-3537717c0d0c)
 
-   
+   ## Sneak Peek of the Website
+
+You can view the photo slider demo with the screenshots here: [View Slider](https://shiripandey.github.io/slider/slider.html)
+
+![Slider Demo](https://shiripandey.github.io/slider/slider-thumbnail.jpg)
+
 -------------------------------------------------------------------------
 BASIC IDEA
 -------------------------------------------------------------------------
