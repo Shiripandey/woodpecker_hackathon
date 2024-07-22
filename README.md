@@ -6,15 +6,14 @@ Sneak Peek of the website
 ![Screenshot (38)](https://github.com/user-attachments/assets/71607f98-8b29-47b3-adc3-46516306c5cc)
 
 ![Screenshot (39)](https://github.com/user-attachments/assets/80876136-bfd7-4acb-80a7-541a067642ec)
+![23](https://github.com/user-attachments/assets/fbea0d43-92bf-4891-93ee-3537717c0d0c)
 
-![Screenshot (44)](https://github.com/user-attachments/assets/e21fb780-9e92-49c0-895e-ce8ced3cf121)
-
+![22](https://github.com/user-attachments/assets/94012dcf-b080-4d85-944f-23571a2d9de8)
  ![Screenshot (48)](https://github.com/user-attachments/assets/304288f5-cf0d-4290-805e-65f7ad456284)
 
   ![Screenshot (42)](https://github.com/user-attachments/assets/17294558-0578-42b2-b115-9a6e15e78099)
-![22](https://github.com/user-attachments/assets/94012dcf-b080-4d85-944f-23571a2d9de8)
 
-![23](https://github.com/user-attachments/assets/fbea0d43-92bf-4891-93ee-3537717c0d0c)
+
 
    ## Sneak Peek of the Website
 
