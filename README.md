@@ -15,12 +15,6 @@ Sneak Peek of the website
 
 
 
-   ## Sneak Peek of the Website
-
-You can view the photo slider demo with the screenshots here: [View Slider](https://shiripandey.github.io/slider/slider.html)
-
-![Slider Demo](https://shiripandey.github.io/slider/slider-thumbnail.jpg)
-
 -------------------------------------------------------------------------
 BASIC IDEA
 -------------------------------------------------------------------------
