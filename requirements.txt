@@ -1,11 +1,7 @@
-Flask==1.1.2
+Flask==2.2.2
 Werkzeug==1.0.1
 gunicorn==20.1.0
 python-dotenv==0.19.0
-<<<<<<< HEAD
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 itsdangerous==1.1.0
-=======
-done
->>>>>>> 970ee54ef10a3d065287041a82c3f28ee87b33da
