@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------
 # Disaster Prediction and Management Website 
-[![Watch the video](https://d8it4huxumps7.cloudfront.net/uploads/submissions/files/764516/669f832d4a509_screen_recording_2024_07_23_150703_diaaysgz.mp4)]
+[[Watch the video](https://d8it4huxumps7.cloudfront.net/uploads/submissions/files/764516/669f832d4a509_screen_recording_2024_07_23_150703_diaaysgz.mp4)]
 
 -------------------------------------------------------------------------
 Sneak Peek of the website 
